@@ -1,3 +1,13 @@
-p {
-  font-family: Lato;
+input {
+  padding: 10px;
+  border: 1px solid rgb(182, 174, 174);
+  margin: 0 6px 10px 0;
+}
+button {
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+.mat-radio-group {
+  margin-top: 10px;
 }

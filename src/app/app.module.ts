@@ -7,15 +7,21 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     MatButtonModule,
     MatRadioModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent]

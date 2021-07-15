@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { ChangeDetectorRef, Component, VERSION } from '@angular/core';
 
 export declare interface Candidate {
   firstName: string;
@@ -16,8 +16,9 @@ export class AppComponent {
   fName = '';
   lName = '';
   email = '';
-  gender = 'Male';
+  gender = '1';
   candidateList: Candidate[] = [];
+  renderTable = false;
   displayedColumns: string[] = ['firstname', 'lastname', 'email', 'gender'];
 
   addCandidate() {
@@ -25,9 +26,10 @@ export class AppComponent {
       firstName: this.fName,
       lastName: this.lName,
       email: this.email,
-      gender: this.gender === '1' ? 'Male' : 'Female'
+      gender: this.gender == '1' ? 'Male' : 'Female'
     };
     this.candidateList.push(candidate);
-    console.log(this.candidateList);
+    this.candidateList = [...this.candidateList];
+    this.renderTable = true;
   }
 }
