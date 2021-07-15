@@ -50,7 +50,7 @@ export class HelloComponent implements OnChanges {
     }
   }
 
-  OnChange($event) {
+  OnChange() {
     if (this.male && this.female) {
       this.list = this.candidateList.filter(a => {
         return a.gender == 'Male' || a.gender == 'Female';
